@@ -1,0 +1,66 @@
+{
+  "name": "@vedant-tawde/cachekit",
+  "version": "1.0.0",
+  "description": "Lightweight, robust in-memory caching engine with LRU eviction, TTL expiration, async memoization, request deduplication, and Express middleware.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./cache": "./src/cache.js",
+    "./memoize": "./src/memoize.js",
+    "./dedupe": "./src/dedupe.js",
+    "./middleware": "./src/middleware.js"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "test": "node --test test/**/*.test.js",
+    "test:coverage": "node --test --experimental-test-coverage test/**/*.test.js",
+    "example:basic": "node examples/basic-usage.js",
+    "example:express": "node examples/express-example.js"
+  },
+  "keywords": [
+    "cache",
+    "caching",
+    "in-memory",
+    "lru",
+    "ttl",
+    "memoize",
+    "memoization",
+    "deduplication",
+    "express",
+    "middleware",
+    "node",
+    "performance"
+  ],
+  "author": "Vedant Tawde <vedanttawde.work@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vedant-Tawde/cachekit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Vedant-Tawde/cachekit/issues"
+  },
+  "homepage": "https://github.com/Vedant-Tawde/cachekit#readme",
+  "peerDependencies": {
+    "express": "^4.0.0 || ^5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "express": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "express": "^4.21.2"
+  }
+}
